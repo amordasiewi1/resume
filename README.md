@@ -1,6 +1,8 @@
 
 ## Setup
 
+All the setup here is for WSL, but should work on Windows with uv, a latex distribution, and latexmk installed.
+
 Install [uv](https://docs.astral.sh/uv/getting-started/installation/).
 PDF generation also requires `latexmk` and a LaTeX distribution on your PATH.
 For Ubuntu/WSL:
