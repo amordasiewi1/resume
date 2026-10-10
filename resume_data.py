@@ -28,7 +28,7 @@ resume = Resume(
             ContactLink(
                 label="website",
                 url="https://alessandromordasiewicz.com/",
-                display="alessandromordasiewicz.com"
+                display="alessandromordasiewicz.com/"
             ),
             ContactLink(
                 label="LinkedIn",
@@ -305,11 +305,11 @@ resume = Resume(
                         SkillGroup(
                             name="Programming",
                             skills=[
-                                "MATLAB",
                                 "Python",
                                 "C/C++",
                                 "Rust",
                                 "Julia",
+                                "MATLAB",
                                 "Java",
                                 "JavaScript",
                                 "TypeScript (React)",
