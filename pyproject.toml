@@ -1,0 +1,13 @@
+[project]
+name = "resume"
+version = "0.1.0"
+description = "Resume generation tool"
+requires-python = ">=3.12"
+dependencies = [
+    "jinja2>=3.1,<4",
+    "pydantic>=2,<3",
+    "pyyaml>=6,<7",
+]
+
+[tool.uv]
+package = false
