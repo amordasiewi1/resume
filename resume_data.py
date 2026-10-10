@@ -1,3 +1,5 @@
+"""This is where you put all tour resume data"""
+
 from resume import (
     Resume,
     Contacts,
@@ -26,8 +28,13 @@ resume = Resume(
             ContactLink(
                 label="LinkedIn",
                 url="https://www.linkedin.com/in/alessandro-mordasiewicz/",
-                display="linkedin.com/in/alessandro-mordasiewicz/",
+                display="linkedin.com/in/alessandro-mordasiewicz",
             ),
+            ContactLink(
+                label="website",
+                url="https://alessandromordasiewicz.com/",
+                display="alessandromordasiewicz.com"
+            )
         ],
     ),
 

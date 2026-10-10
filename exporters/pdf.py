@@ -2,7 +2,9 @@ from pathlib import Path
 import shutil
 import subprocess
 
-
+"""
+Latex PDF Compiler class
+"""
 class PDFCompiler:
     def __init__(self):
         if shutil.which("latexmk") is None:

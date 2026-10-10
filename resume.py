@@ -5,7 +5,7 @@ from pathlib import Path
 from typing import Annotated, Any, Literal
 
 import yaml
-from pydantic import BaseModel, ConfigDict, Field, model_validator
+from pydantic import BaseModel, ConfigDict, Field
 
 
 # Base data model from which all classes inherit
@@ -44,24 +44,6 @@ class DateRange(ResumeModel):
     end: dt.datetime | None = None
     present: bool = False
 
-    @model_validator(mode="after")
-    def validate_dates(self) -> DateRange:
-        if self.present and self.end is not None:
-            raise ValueError(
-                "DateRange cannot have both an end date and present=True."
-            )
-
-        if (
-            self.start is not None
-            and self.end is not None
-            and self.end < self.start
-        ):
-            raise ValueError(
-                "End date cannot be before start date."
-            )
-
-        return self
-
     @staticmethod
     def format_date(date: dt.datetime) -> str:
         return date.strftime("%B %Y")
@@ -81,7 +63,7 @@ class DateRange(ResumeModel):
         return f"{start} - {self.format_date(self.end)}"
 
 
-# Convenience helper
+# Convenience helper for DateRange
 def month(year: int, month: int) -> dt.datetime:
     return dt.datetime(year, month, 1)
 
@@ -101,7 +83,7 @@ class ExperienceEntry(ResumeModel):
 
 
 # Education
-
+# TODO: make this more robust somehow
 class Degree(ResumeModel):
     """One degree earned or pursued at an institution."""
 

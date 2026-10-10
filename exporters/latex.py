@@ -4,7 +4,9 @@ from jinja2 import Environment, FileSystemLoader
 
 from resume import Resume
 
-
+"""
+Custom escape characters for latex exporter so it doesnt get confused
+"""
 def latex_escape(text: str | None) -> str:
     if text is None:
         return ""
@@ -29,7 +31,9 @@ def latex_escape(text: str | None) -> str:
 
     return result
 
-
+"""
+Latex exporter class, needs jinja template
+"""
 class LatexExporter:
     def __init__(self, template_dir: str | Path = "templates"):
         self.template_dir = Path(template_dir)
@@ -54,7 +58,7 @@ class LatexExporter:
         self.environment.filters["latex"] = latex_escape
 
     def render(
-        self,
+            self,
         resume: Resume,
         template_name: str = "resume.tex.j2",
     ) -> str:

@@ -1,0 +1,523 @@
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{setspace}
+\usepackage[margin=0.45in]{geometry}
+
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+
+\setlength{\headheight}{0pt}
+\setlength{\headsep}{0pt}
+\setlength{\topskip}{0pt}
+
+\addtolength{\topmargin}{-0.25in}
+
+\fancyhf{}
+\fancyfoot{}
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\setstretch{0.95}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+    \vspace{-4pt}
+    \scshape
+    \raggedright
+    \large
+}{}{0em}{}[
+    \color{black}
+    \titlerule
+    \vspace{-5pt}
+]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+    \item\small{
+        {#1 \vspace{-1.5pt}}
+    }
+}
+
+\newcommand{\resumeSubheading}[4]{
+    \vspace{-2pt}
+    \item
+
+    \begin{tabular*}{0.97\textwidth}[t]{
+        l@{\extracolsep{\fill}}r
+    }
+
+        \textbf{#1} & #2 \\
+
+        \textit{\small #3} &
+        \textit{\small #4} \\
+
+    \end{tabular*}
+
+    \vspace{-7pt}
+}
+
+\renewcommand\labelitemii{
+    $\vcenter{\hbox{\tiny$\bullet$}}$
+}
+
+\newcommand{\resumeSubHeadingListStart}{
+    \begin{itemize}[leftmargin=0.15in, label={}]
+}
+
+\newcommand{\resumeSubHeadingListEnd}{
+    \end{itemize}
+}
+
+\newcommand{\resumeItemListStart}{
+    \begin{itemize}
+}
+
+\newcommand{\resumeItemListEnd}{
+    \end{itemize}
+    \vspace{-5pt}
+}
+
+% ============================================================
+% DOCUMENT
+% ============================================================
+
+\begin{document}
+
+% ============================================================
+% HEADING
+% ============================================================
+
+\begin{center}
+    \textbf{\Huge \scshape Alessandro Mordasiewicz} \\ \vspace{4pt}
+
+    U.S. Citizen \\ \vspace{2pt}
+
+    \small
+    \mbox{
+        312-608-0070 $|$
+        \href{mailto:amordasiewi1@gmail.com}{
+            \underline{amordasiewi1@gmail.com}
+        }%
+            $|$
+            \href{https://www.linkedin.com/in/alessandro-mordasiewicz/}{
+                \underline{linkedin.com/in/alessandro-mordasiewicz}
+            }%
+            $|$
+            \href{https://alessandromordasiewicz.com/}{
+                \underline{alessandromordasiewicz.com}
+            }%
+    }
+\end{center}
+
+
+% ============================================================
+% SECTIONS
+% ============================================================
+
+
+\section{Education}
+
+
+% ------------------------------------------------------------
+% EDUCATION
+% ------------------------------------------------------------
+
+
+\resumeSubHeadingListStart
+
+
+\item
+
+\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+
+    \textbf{Purdue University} &
+    West Lafayette, IN \\[-1pt]
+
+
+        \small
+        M.S. Aeronautics and Astronautics
+        &
+        \small
+        January 2027 - Present
+        \\[-1pt]
+
+        \small
+        \hspace{1.25em}
+
+
+                \textit{Major Concentration:}
+                Astrodynamics
+
+                \enspace $|$ \enspace
+
+                \textit{Minor Concentration:}
+                Autonomy \& Control
+
+
+        &
+
+            \small GPA: 4.0/4.0
+
+        \\[2pt]
+
+
+        \small
+        B.S. Aeronautical and Astronautical Engineering
+        &
+        \small
+        August 2022 - May 2026
+        \\[-1pt]
+
+        \small
+        \hspace{1.25em}
+
+
+                \textit{Concentration:}
+                Astrodynamics
+
+                \enspace $|$ \enspace
+
+                \textit{Minor:}
+                Computer Science
+
+
+        &
+
+            \small GPA: 3.4/4.0
+
+        \\[2pt]
+
+
+\end{tabular*}
+
+\vspace{1pt}
+
+
+{\small
+    \textbf{Relevant Coursework:}
+    Orbit Mechanics, Space Traffic Management, Spacecraft Attitude Dynamics, Applied Control in Astronautics, Applied Stochastic Processes, Control System Analysis, Geometric Control Methods
+    \par
+}
+\vspace{1pt}
+
+{\small
+    \textbf{Interests:}
+    Spacecraft \& launch vehicle GNC, astrodynamics, mission analysis/design, modeling \& simulation, software engineering
+    \par
+}
+
+
+\resumeSubHeadingListEnd
+
+\vspace{-10pt}
+
+
+% ------------------------------------------------------------
+% EXPERIENCES
+% ------------------------------------------------------------
+
+
+
+\section{Professional Experience}
+
+
+% ------------------------------------------------------------
+% EDUCATION
+% ------------------------------------------------------------
+
+
+\resumeSubHeadingListStart
+
+
+    \resumeSubheading
+        {GNC Intern, Mission Design}
+        {May 2026 - November 2026}
+        {Relativity Space}
+        {Long Beach, CA}
+
+
+        \resumeItemListStart
+
+
+            \resumeItem{
+                Supported the Mission Design group in launch vehicle trajectory optimization productionization and day-of-launch tooling development for the Terran R medium-to-heavy-lift partially reusable launch vehicle.
+            }
+
+
+            \resumeItem{
+                Responsible for the creation of launch window generation and evaluation tooling (Python).
+            }
+
+
+            \resumeItem{
+                Enhanced robustness of second-stage guidance algorithm for inertial orbit targeting (Rust).
+            }
+
+
+            \resumeItem{
+                Conducted preliminary launch vehicle collision avoidance and payload separation analyses (Python).
+            }
+
+
+            \resumeItem{
+                Worked in conjunction with the Simulation team for several extensive 6DoF simulation improvements (C++/Python).
+            }
+
+
+            \resumeItem{
+                Extensively used Git (via GitLab) for version control.
+            }
+
+
+        \resumeItemListEnd
+
+
+
+    \resumeSubheading
+        {Flight Mechanics Intern}
+        {May 2025 - August 2025}
+        {NASA - Marshall Space Flight Center}
+        {Huntsville, AL}
+
+
+        \resumeItemListStart
+
+
+            \resumeItem{
+                Supported the NASA HLS guidance, navigation, \& mission analysis group (EV42) under the ESSCA contract.
+            }
+
+
+            \resumeItem{
+                Developed Python/MATLAB tools to enhance lunar DEM fidelity for hazard injection and lander tip-over analysis.
+            }
+
+
+            \resumeItem{
+                Integrated enhanced lunar DEMs into a 6DoF landing dynamics simulation.
+            }
+
+
+            \resumeItem{
+                Verified and validated HLS landing dynamics simulations by reconstructing the Apollo 11 landing.
+            }
+
+
+            \resumeItem{
+                Developed a Python landing visualization tool, reducing generation time from 2 hours to 2-3 minutes.
+            }
+
+
+            \resumeItem{
+                Extensively used Git (via GitHub) for version control.
+            }
+
+
+        \resumeItemListEnd
+
+
+
+    \resumeSubheading
+        {Flight Dynamics Intern}
+        {May 2024 - August 2024}
+        {Intelsat (now SES Satellites)}
+        {McLean, VA}
+
+
+        \resumeItemListStart
+
+
+            \resumeItem{
+                Supported daily Flight Dynamics operations of over 70 active GEO satellites.
+            }
+
+
+            \resumeItem{
+                Developed and maintained an interactive web application (Python, React) to analyze critical satellite parameters.
+            }
+
+
+            \resumeItem{
+                Developed Python scripts for data visualization in operational flight dynamics software migrating to Linux.
+            }
+
+
+            \resumeItem{
+                Evaluated a GPS-based position estimation method against existing state estimation systems for GEO satellites.
+            }
+
+
+            \resumeItem{
+                Gained experience with Git for version control, enabling efficient collaboration and code management.
+            }
+
+
+        \resumeItemListEnd
+
+
+
+    \resumeSubheading
+        {Aerospace Engineering Intern}
+        {May 2023 - August 2023}
+        {Axiom Aerospace LLC}
+        {Chicago, IL}
+
+
+        \resumeItemListStart
+
+
+            \resumeItem{
+                Compiled FAA certification packages including comprehensive engineering reports, design drawings, and test \& computations for Parts Manufacturer Approval (PMA) on FAA Part 23, 25, 27, and 29 category aircraft.
+            }
+
+
+            \resumeItem{
+                Created and edited engineering drawings using SolidWorks and Adobe Acrobat for various aircraft parts.
+            }
+
+
+            \resumeItem{
+                Submitted final project files to the FAA Chicago Aircraft Certification Office for review and approval.
+            }
+
+
+        \resumeItemListEnd
+
+
+
+\resumeSubHeadingListEnd
+
+
+% ------------------------------------------------------------
+% PUBLICATIONS
+% ------------------------------------------------------------
+
+
+
+\section{Extracurriculars}
+
+
+% ------------------------------------------------------------
+% EDUCATION
+% ------------------------------------------------------------
+
+
+\resumeSubHeadingListStart
+
+
+    \resumeSubheading
+        {Undergraduate Teaching Assistant}
+        {August 2023 - May 2026}
+        {Purdue University Department of Physics and Astronomy}
+        {West Lafayette, IN}
+
+
+        \resumeItemListStart
+
+
+            \resumeItem{
+                TA for PHYS 172: Modern Mechanics, the introductory physics course for first-year engineering students.
+            }
+
+
+            \resumeItem{
+                Facilitated lab sections of up to 54 students, assisting students in understanding basic physics concepts and programming in Python.
+            }
+
+
+        \resumeItemListEnd
+
+
+
+\resumeSubHeadingListEnd
+
+
+% ------------------------------------------------------------
+% PUBLICATIONS
+% ------------------------------------------------------------
+
+
+
+\section{Publications}
+
+
+% ------------------------------------------------------------
+% EDUCATION
+% ------------------------------------------------------------
+
+
+\resumeSubHeadingListStart
+
+\item \small{
+R. M. Ali, A. C. Slagle, \textbf{A. Mordasiewicz}, J. Orphee, and P. J. McDonough,
+``Apollo 11 Lunar Module Touchdown Dynamics Reconstruction Verification and Validation for Human Landing Systems'', in \textit{48th Annual AAS Guidance, Navigation and Control (GN\&C) Conference}, Breckenridge, CO, 2026, NASA Technical Reports Server, Doc. ID 20260000331 (\href{https://ntrs.nasa.gov/citations/20260000331}{\underline{https://ntrs.nasa.gov/citations/20260000331}}).
+}
+
+\resumeSubHeadingListEnd
+
+
+% ------------------------------------------------------------
+% SKILLS
+% ------------------------------------------------------------
+
+
+
+\section{Technical Skills}
+
+
+% ------------------------------------------------------------
+% EDUCATION
+% ------------------------------------------------------------
+
+
+\begin{itemize}[leftmargin=0.15in, label={}]
+
+
+    \small{\item{
+
+
+        \textbf{Programming}:
+        MATLAB, Python, C/C++, Rust, Julia, Java, JavaScript, TypeScript (React), HTML/CSS, Bash, Git, R
+
+            \par
+
+
+        \textbf{Other}:
+        Simulink, GMAT, FreeFlyer, STK, Azure DevOps, GitHub, GitLab, Microsoft Office, Jira, SolidWorks, Siemens NX
+
+
+
+    }}
+
+
+\end{itemize}
+
+
+% ------------------------------------------------------------
+% CUSTOM SECTIONS
+% ------------------------------------------------------------
+
+
+
+
+\end{document}

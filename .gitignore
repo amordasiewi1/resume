@@ -11,10 +11,7 @@
 *.bbl
 *.blg
 
-# Python environments and caches
+# environment and python cahce
 .venv/
 __pycache__/
 *.py[cod]
-
-# Generated resume outputs
-data/
