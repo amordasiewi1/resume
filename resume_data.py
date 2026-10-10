@@ -26,15 +26,15 @@ resume = Resume(
         email="amordasiewi1@gmail.com",
         links=[
             ContactLink(
+                label="website",
+                url="https://alessandromordasiewicz.com/",
+                display="alessandromordasiewicz.com"
+            ),
+            ContactLink(
                 label="LinkedIn",
                 url="https://www.linkedin.com/in/alessandro-mordasiewicz/",
                 display="linkedin.com/in/alessandro-mordasiewicz",
             ),
-            ContactLink(
-                label="website",
-                url="https://alessandromordasiewicz.com/",
-                display="alessandromordasiewicz.com"
-            )
         ],
     ),
 
