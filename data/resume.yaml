@@ -3,12 +3,12 @@ contacts:
     phone: 312-608-0070
     email: amordasiewi1@gmail.com
     links:
+        -   label: website
+            url: https://alessandromordasiewicz.com/
+            display: alessandromordasiewicz.com/
         -   label: LinkedIn
             url: https://www.linkedin.com/in/alessandro-mordasiewicz/
             display: linkedin.com/in/alessandro-mordasiewicz
-        -   label: website
-            url: https://alessandromordasiewicz.com/
-            display: alessandromordasiewicz.com
 citizenship: U.S. Citizen
 sections:
     -   title: Education
@@ -174,11 +174,11 @@ sections:
                 groups:
                     -   name: Programming
                         skills:
-                            - MATLAB
                             - Python
                             - C/C++
                             - Rust
                             - Julia
+                            - MATLAB
                             - Java
                             - JavaScript
                             - TypeScript (React)
