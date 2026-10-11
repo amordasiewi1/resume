@@ -26,6 +26,3 @@ Edit `resume_data.py`, then run from the repository root:
 ```bash
 uv run main.py
 ```
-
-Outputs are written to `data/resume.json`, `data/resume.yaml`,
-`data/resume.tex`, and `data/resume.pdf`.
