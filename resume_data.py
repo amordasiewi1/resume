@@ -28,7 +28,7 @@ resume = Resume(
             ContactLink(
                 label="website",
                 url="https://alessandromordasiewicz.com/",
-                display="alessandromordasiewicz.com/"
+                display="alessandromordasiewicz.com"
             ),
             ContactLink(
                 label="LinkedIn",
@@ -214,10 +214,6 @@ resume = Resume(
                         (
                             "Created and edited engineering drawings using SolidWorks "
                             "and Adobe Acrobat for various aircraft parts."
-                        ),
-                        (
-                            "Submitted final project files to the FAA Chicago Aircraft "
-                            "Certification Office for review and approval."
                         ),
                     ],
                 ),

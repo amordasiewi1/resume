@@ -7,7 +7,7 @@
             {
                 "label": "website",
                 "url": "https://alessandromordasiewicz.com/",
-                "display": "alessandromordasiewicz.com/"
+                "display": "alessandromordasiewicz.com"
             },
             {
                 "label": "LinkedIn",
@@ -147,8 +147,7 @@
                     },
                     "bullets": [
                         "Compiled FAA certification packages including comprehensive engineering reports, design drawings, and test & computations for Parts Manufacturer Approval (PMA) on FAA Part 23, 25, 27, and 29 category aircraft.",
-                        "Created and edited engineering drawings using SolidWorks and Adobe Acrobat for various aircraft parts.",
-                        "Submitted final project files to the FAA Chicago Aircraft Certification Office for review and approval."
+                        "Created and edited engineering drawings using SolidWorks and Adobe Acrobat for various aircraft parts."
                     ]
                 }
             ]

@@ -116,12 +116,12 @@
     \mbox{
         ((( resume.contacts.phone | latex ))) $|$
         \href{mailto:((( resume.contacts.email )))}{
-            \underline{((( resume.contacts.email | latex )))}
+            \underline{\strut ((( resume.contacts.email | latex )))}
         }%
         ((* for link in resume.contacts.links *))
             $|$
             \href{((( link.url )))}{
-                \underline{((( (link.display or link.label) | latex )))}
+                \underline{\strut ((( (link.display or link.label) | latex )))}
             }%
         ((* endfor *))
     }

@@ -5,7 +5,7 @@ contacts:
     links:
         -   label: website
             url: https://alessandromordasiewicz.com/
-            display: alessandromordasiewicz.com/
+            display: alessandromordasiewicz.com
         -   label: LinkedIn
             url: https://www.linkedin.com/in/alessandro-mordasiewicz/
             display: linkedin.com/in/alessandro-mordasiewicz
@@ -129,8 +129,6 @@ sections:
                         27, and 29 category aircraft.
                     - Created and edited engineering drawings using SolidWorks and
                         Adobe Acrobat for various aircraft parts.
-                    - Submitted final project files to the FAA Chicago Aircraft Certification
-                        Office for review and approval.
     -   title: Extracurriculars
         entries:
             -   kind: experience
