@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ resume.name }} — Resume</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: #222;
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.45;
+    }
+    main {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+    header { text-align: center; }
+    h1 { margin: 0 0 .4rem; }
+    h2 {
+      font-size: 1.2rem;
+      border-bottom: 1px solid currentColor;
+      margin: 1.5rem 0 .75rem;
+    }
+    h3 { font-size: 1rem; margin: 0; }
+    p { margin: .25rem 0; }
+    article { margin-bottom: 1rem; }
+    .contacts {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: .25rem 1rem;
+    }
+    a {
+      color: inherit;
+      text-underline-offset: .2em;
+      overflow-wrap: anywhere;
+    }
+    .row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: baseline;
+      gap: .25rem 1rem;
+    }
+    .right { text-align: right; }
+    .degree-details { padding-left: 1.25em; }
+    ul { margin: .4rem 0; padding-left: 1.5rem; }
+    @media (max-width: 600px) {
+      main { padding: 1.25rem; }
+      .row { grid-template-columns: minmax(0, 1fr); }
+      .right { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>{{ resume.name }}</h1>
+
+      {% if resume.citizenship %}
+      <p>{{ resume.citizenship }}</p>
+      {% endif %}
+
+      <div class="contacts">
+        {% if resume.contacts.phone %}
+        <span>{{ resume.contacts.phone }}</span>
+        {% endif %}
+
+        {% if resume.contacts.email %}
+        <a href="mailto:{{ resume.contacts.email }}">
+          {{ resume.contacts.email }}
+        </a>
+        {% endif %}
+
+        {% for link in resume.contacts.links %}
+        <a href="{{ link.url }}">{{ link.display or link.label }}</a>
+        {% endfor %}
+      </div>
+    </header>
+
+    {% for section in resume.sections %}
+    <section>
+      <h2>{{ section.title }}</h2>
+
+      {% for entry in section.entries %}
+      <article>
+        {% if entry.kind == "education" %}
+        <div class="row">
+          <h3>{{ entry.institution }}</h3>
+        {% if entry.location %}
+          <span class="right">{{ entry.location }}</span>
+        {% endif %}
+        </div>
+
+        {% for degree in entry.degrees %}
+        <div class="degree">
+          <div class="row">
+            <span>{{ degree.degree }}</span>
+            {% if degree.dates %}
+            <span class="right">{{ degree.dates.display() }}</span>
+            {% endif %}
+          </div>
+          {% if degree.concentrations or degree.minors or degree.gpa %}
+          <div class="row">
+            <span class="degree-details">
+              {% if degree.concentrations %}
+              <em>{{ "Major Concentration" if "M.S." in degree.degree else "Concentration" }}:</em>
+              {{ degree.concentrations | join(", ") }}
+              {% endif %}
+              {% if degree.concentrations and degree.minors %} | {% endif %}
+              {% if degree.minors %}
+              <em>{{ "Minor Concentration" if "M.S." in degree.degree else "Minor" }}:</em>
+              {{ degree.minors | join(", ") }}
+              {% endif %}
+            </span>
+            {% if degree.gpa %}
+            <span class="right">GPA: {{ degree.gpa }}</span>
+            {% endif %}
+          </div>
+          {% endif %}
+        </div>
+        {% endfor %}
+
+        {% if entry.coursework %}
+        <p>
+          <strong>Relevant coursework:</strong>
+          {{ entry.coursework | join(", ") }}
+        </p>
+        {% endif %}
+
+        {% if entry.interests %}
+        <p><strong>Interests:</strong> {{ entry.interests | join(", ") }}</p>
+        {% endif %}
+
+        {% elif entry.kind == "experience" %}
+        <div class="row">
+          <h3>{{ entry.title }}</h3>
+          {% if entry.dates %}
+          <span class="right">{{ entry.dates.display() }}</span>
+          {% endif %}
+        </div>
+        <div class="row">
+          <span><em>{{ entry.organization }}</em></span>
+          {% if entry.location %}
+          <span class="right"><em>{{ entry.location }}</em></span>
+          {% endif %}
+        </div>
+
+        {% elif entry.kind == "publication" %}
+        <p class="publication">
+          {% for author in entry.authors %}{% if author.highlight %}<strong>{{ author.name }}</strong>{% else %}{{ author.name }}{% endif %}{% if not loop.last %}{% if loop.revindex == 2 %}, and {% else %}, {% endif %}{% endif %}{% endfor %}{% if entry.authors %}, {% endif %}“{{ entry.title }}”{% if entry.venue %}, in <em>{{ entry.venue }}</em>{% endif %}{% if entry.location %}, {{ entry.location }}{% endif %}{% if entry.year %}, {{ entry.year }}{% endif %}{% if entry.identifier %}, {{ entry.identifier }}{% endif %}{% if entry.url %} (<a href="{{ entry.url }}">{{ entry.url }}</a>){% endif %}.
+        </p>
+
+        {% elif entry.kind == "skills" %}
+        {% for group in entry.groups %}
+        <p>
+          <strong>{{ group.name }}:</strong>
+          {{ group.skills | join(", ") }}
+        </p>
+        {% endfor %}
+
+        {% elif entry.kind == "custom" %}
+        {% if entry.title %}
+        <h3>{{ entry.title }}</h3>
+        {% endif %}
+
+        {% if entry.subtitle %}
+        <p>{{ entry.subtitle }}</p>
+        {% endif %}
+
+        {% if entry.location %}
+        <p>{{ entry.location }}</p>
+        {% endif %}
+
+        {% if entry.dates %}
+        <p class="dates">{{ entry.dates.display() }}</p>
+        {% endif %}
+
+        {% if entry.text %}
+        <p>{{ entry.text }}</p>
+        {% endif %}
+        {% endif %}
+
+        {% if entry.kind in ["education", "experience", "custom"] %}
+          {% if entry.bullets %}
+          <ul>
+            {% for bullet in entry.bullets %}
+            <li>{{ bullet }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        {% endif %}
+      </article>
+      {% endfor %}
+    </section>
+    {% endfor %}
+  </main>
+</body>
+</html>
