@@ -70,9 +70,7 @@
         {% endif %}
 
         {% if resume.contacts.email %}
-        <a href="mailto:{{ resume.contacts.email }}">
-          {{ resume.contacts.email }}
-        </a>
+        <span>{{ resume.contacts.email }}</span>
         {% endif %}
 
         {% for link in resume.contacts.links %}

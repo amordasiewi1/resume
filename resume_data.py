@@ -22,8 +22,7 @@ resume = Resume(
     citizenship="U.S. Citizen",
 
     contacts=Contacts(
-        phone="312-608-0070",
-        email="amordasiewi1@gmail.com",
+        email="amordasiewi1 [at] gmail [dot] com",
         links=[
             ContactLink(
                 label="website",

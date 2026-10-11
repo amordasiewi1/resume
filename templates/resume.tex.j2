@@ -22,7 +22,7 @@
 \setlength{\headsep}{0pt}
 \setlength{\topskip}{0pt}
 
-\addtolength{\topmargin}{-0.25in}
+\addtolength{\topmargin}{-0.20in}
 
 \fancyhf{}
 \fancyfoot{}
@@ -114,12 +114,12 @@
 
     \small
     \mbox{
-        ((( resume.contacts.phone | latex ))) $|$
-        \href{mailto:((( resume.contacts.email )))}{
-            \underline{\strut ((( resume.contacts.email | latex )))}
-        }%
+        ((* if resume.contacts.phone *))
+        ((( resume.contacts.phone | latex )))\hspace{1em}
+        ((* endif *))
+        {\strut ((( resume.contacts.email | latex )))}%
         ((* for link in resume.contacts.links *))
-            $|$
+            \hspace{1em}
             \href{((( link.url )))}{
                 \underline{\strut ((( (link.display or link.label) | latex )))}
             }%
