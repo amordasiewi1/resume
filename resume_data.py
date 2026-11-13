@@ -50,7 +50,8 @@ resume = Resume(
                             degree="M.S. Aeronautics and Astronautics",
                             dates=DateRange(
                                 start=month(2027, 1),
-                                present=True,
+                                end=month(2027, 12),
+                                expected=True,
                             ),
                             gpa="4.0/4.0",
                             concentrations=["Astrodynamics"],
@@ -73,20 +74,20 @@ resume = Resume(
                         "Spacecraft Attitude Dynamics",
                         "Applied Control in Astronautics",
                         "Applied Stochastic Processes",
-                        "Control System Analysis",
-                        "Geometric Control Methods",
+                        "Optimization Methods for Systems and Control",
+                        "Optimal Control and Estimation.",
                     ],
                     interests=[
-                        "Spacecraft & launch vehicle GNC",
+                        "Space vehicle GNC",
+                        "optimization",
                         "astrodynamics",
-                        "mission analysis/design",
-                        "modeling & simulation",
-                        "software engineering",
+                        "mission design & analysis",
+                        "dynamics simulation",
+                        "software engineering.",
                     ],
                 ),
             ],
-        ),
-        # professional experience
+        ),        # professional experience
         Section(
             title="Professional Experience",
             entries=[
@@ -101,26 +102,28 @@ resume = Resume(
                     ),
                     bullets=[
                         (
-                            "Supported the Mission Design group in launch vehicle "
-                            "trajectory optimization productionization and day-of-launch "
-                            "tooling development for the Terran R medium-to-heavy-lift "
-                            "partially reusable launch vehicle."
+                            "Supported the GNC Mission Design team across algorithm development, "
+                            "simulation development, and analysis tasks for the Terran R medium/heavy-"
+                            "lift launch vehicle."
                         ),
                         (
-                            "Responsible for the creation of launch window generation "
-                            "and evaluation tooling (Python)."
+                            "Enhanced robustness of second stage guidance algorithm to "
+                            "enable accurate inertial orbit targeting (Rust)."
                         ),
                         (
-                            "Enhanced robustness of second-stage guidance algorithm "
-                            "for inertial orbit targeting (Rust)."
+                            "Developed launch window search, generation, and analysis tooling (Python)."
                         ),
                         (
-                            "Conducted preliminary launch vehicle collision avoidance "
-                            "and payload separation analyses (Python)."
+                            "Built payload separation analysis tool and successfully conducted "
+                            "preliminary analyses (C++, Python)."
                         ),
                         (
-                            "Worked in conjunction with the Simulation team for several "
-                            "extensive 6DoF simulation improvements (C++/Python)."
+                            "Worked in conjunction with the GNC Simulation team for several "
+                            "6DoF simulation improvements (C++, Python)."
+                        ),
+                        (
+                            "Generalized orbit maneuver formulation in trajectory optimization "
+                            "tooling (Julia)."
                         ),
                         (
                             "Extensively used Git (via GitLab) for version control."
@@ -142,20 +145,20 @@ resume = Resume(
                             "analysis group (EV42) under the ESSCA contract."
                         ),
                         (
-                            "Developed Python/MATLAB tools to enhance lunar DEM fidelity "
-                            "for hazard injection and lander tip-over analysis."
+                            "Developed tools to enhance lunar DEM fidelity "
+                            "for hazard injection and lander tip-over analysis (Python, MATLAB)."
                         ),
                         (
                             "Integrated enhanced lunar DEMs into a 6DoF landing "
-                            "dynamics simulation."
+                            "dynamics simulation (MATLAB, Simulink)."
                         ),
                         (
                             "Verified and validated HLS landing dynamics simulations "
-                            "by reconstructing the Apollo 11 landing."
+                            "by reconstructing the Apollo 11 landing (MATLAB, Simulink)."
                         ),
                         (
-                            "Developed a Python landing visualization tool, reducing "
-                            "generation time from 2 hours to 2-3 minutes."
+                            "Developed landing visualization tool, reducing "
+                            "generation time from 2 hours to 2-3 minutes (Python)."
                         ),
                         (
                             "Extensively used Git (via GitHub) for version control."
@@ -178,15 +181,15 @@ resume = Resume(
                         ),
                         (
                             "Developed and maintained an interactive web application "
-                            "(Python, React) to analyze critical satellite parameters."
+                            "to analyze critical satellite parameters (Python, TypeScript)."
                         ),
                         (
-                            "Developed Python scripts for data visualization in "
-                            "operational flight dynamics software migrating to Linux."
+                            "Developed data visualization/plotting tooling in "
+                            "operational flight dynamics software migrating to Linux (Python)."
                         ),
                         (
                             "Evaluated a GPS-based position estimation method against "
-                            "existing state estimation systems for GEO satellites."
+                            "existing state estimation systems for GEO satellites (MATLAB)."
                         ),
                         (
                             "Gained experience with Git for version control, enabling "

@@ -43,6 +43,7 @@ class DateRange(ResumeModel):
     start: dt.datetime | None = None
     end: dt.datetime | None = None
     present: bool = False
+    expected: bool = False
 
     @staticmethod
     def format_date(date: dt.datetime) -> str:
@@ -60,7 +61,11 @@ class DateRange(ResumeModel):
         if self.end is None:
             return start
 
-        return f"{start} - {self.format_date(self.end)}"
+        end = self.format_date(self.end)
+
+        if self.expected:
+            end = f"{end} (Expected)"
+        return f"{start} - {end}"
 
 
 # Convenience helper for DateRange
